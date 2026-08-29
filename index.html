@@ -42,6 +42,7 @@
                     <h3> AeroRun Laranja </h3>
                     <p> Leveza para bater seu recorde.</p>
                     <p><del>R$ 399,90</del> R$ 349,90</p>
+                    <button type="button" onclick="comprar('TrailMax', 349,90)">Comprar</button>
                 </article>
                 <article>
                     <span class="badge">Desconto</span>
@@ -49,6 +50,7 @@
                     <h3> UrbanStep Azul </h3>
                     <p> O casual do dia a dia.</p>
                     <p> <del>R$ 279,90</del> R$230,00</p>
+                    <button type="button" onclick="comprar('TrailMax', 230)">Comprar</button>
                 </article>
                 <article>
                     <span class="badge lancamento">lançamento</span>
@@ -56,10 +58,13 @@
                     <h3> TrailMax Verde </h3>
                     <p> Aderencia para trilhas.</p>
                     <p>R$ 429,90</p>
+                    <button type="button" onclick="comprar('TrailMax', 429,90)">Comprar</button>
                 </article>
             </div>
 
         </section>
+
+
 
         <section id="tamanho">
             <h2>Guia de Tamanhos</h2>
@@ -142,6 +147,24 @@
                     </tbody>
                 </table>
             </div>
+        </section>
+
+        <section id="frete">
+            <h2>Calculadora de Fretes</h2>
+            <p>Informe o valor da compra e sua região para calcular o frete</p>
+            <label for="">Valor da compra</label>
+            <input type="number" id="valorCompra">
+            <label for="">Região de entrega</label>
+            <select id="regiao">
+                <option value="">Selecione</option>
+                <option value="sudeste">Sudeste</option>
+                <option value="sul">Sul</option>
+                <option value="nordeste">Nordeste</option>
+            </select>
+            <button type="button" onclick="calcularFrete()">
+                Calcular frete
+            </button>
+            <p id="resultado"></p>
         </section>
 
         <section id="sobre">
@@ -250,7 +273,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button type="submit"><i></i> Cadastrar</button>
+                                        <button type="button" onclick="cadastrar()"><i></i> Cadastrar</button>
                                         <button type="reset">Limpar</button>
                                     </div>
                                 </div>
@@ -272,6 +295,7 @@
         </address>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 
 </html>
