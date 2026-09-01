@@ -174,7 +174,7 @@ input[type="radio"], input[type="checkbox"] {
     color: #25D366;
 }
 
-#email:hover{
+#emailrodape:hover{
     color: var(--laranja-marca);
 }
 
@@ -219,3 +219,65 @@ aside.top-bar strong {
 .lancamento {
     background-color: var(--laranja-marca);
 }
+
+fieldset {
+    border: 2px solid #d66a5c;
+    border-radius: 6px;
+    padding: 15px 20px;
+    margin: 15px 0;
+    background-color: #fff;
+}
+
+legend {
+    font-weight: bold;
+    color: #444;
+    padding: 0 10px;
+    font-size: 16px;
+}
+
+fieldset label {
+    margin-left: 6px;
+    color: #444;
+    font-size: 15px;
+}
+
+fieldset input[type="radio"],
+fieldset input[type="checkbox"] {
+    accent-color: #c85a48;
+    transform: scale(1.1);
+    margin-right: 5px;
+}
+
+fieldset div {
+    margin: 10px 0;
+}
+
+.estilofavorito {
+    display: flex;
+    gap: 30px;
+    align-items: center;
+}
+
+.estilofavorito div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.tipostenis {
+    display: flex;
+    gap: 130px;
+    align-items: center;
+}
+
+.tipostenis div {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.tipostenis label {
+    margin-right: 10px;
+  
+}
+
+

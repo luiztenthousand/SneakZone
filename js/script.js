@@ -7,8 +7,7 @@ function comprar(nomeProduto, preco){
     )
 }
 
-function cadastrar(){
-
+function cadastrar() {
     let nome = document.getElementById("nome").value;
     let email = document.getElementById("email").value;
     let telefone = document.getElementById("telefone").value;
@@ -17,23 +16,59 @@ function cadastrar(){
     let cor = document.getElementById("cor").value;
     let mensagem = document.getElementById("mensagem").value;
 
-    let estilo = document.querySelector(
+
+    let estiloSelecionado = document.querySelector(
         'input[name="estilo"]:checked'
-    ).value
-
-    let cliente ={
-        nome: nome,
-        email: email,
-        telefone: telefone,
-        idade: idade,
-        numeracao: numeracao,
-        cor: cor,
-        estilo: estilo,
-        mensagem: mensagem,
-
+    );
+    
+    let estilo;
+    if (estiloSelecionado) {
+        estilo = estiloSelecionado.value;
+    } else {
+        estilo = "Não informado";
     }
 
-    console.log(cliente)
+
+    let tiposTenis = [];
+
+    if (document.getElementById("tenisCorrida").checked) {
+        tiposTenis.push("Corrida");
+    }
+    if (document.getElementById("tenisCasual").checked) {
+        tiposTenis.push("Casual");
+    }
+    if (document.getElementById("tenisBasquete").checked) {
+        tiposTenis.push("Basquete");
+    }
+    if (document.getElementById("tenisTrilha").checked) {
+        tiposTenis.push("Trilha");
+    }
+
+    let cliente = {
+        nome,
+        email,
+        telefone,
+        idade,
+        numeracao,
+        cor,
+        estilo,
+        tiposTenis,
+        mensagem
+    };
+
+    alert(
+        "Nome: " + nome + "\n" +
+        "E-mail: " + email + "\n" +
+        "Telefone: " + telefone + "\n" +
+        "Idade: " + idade + "\n" +
+        "Numeração: " + numeracao + "\n" +
+        "Cor: " + cor + "\n" +
+        "Estilo: " + estilo + "\n" +
+        "Interesses: " + tiposTenis.join(", ") + "\n" +
+        "Mensagem: " + mensagem
+    );
+
+    console.log(cliente);
 }
 
 function calcularFrete(){

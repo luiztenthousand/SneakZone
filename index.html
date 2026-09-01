@@ -180,7 +180,7 @@
         <section id="faq">
             <h2> Dúvidas Frequentes</h2>
             <details>
-                <summary>Qual o prazo de entreg?</summary>
+                <summary>Qual o prazo de entrega?</summary>
                 <p> 3 a 7 dias úteis.</p>
             </details>
             <details>
@@ -197,33 +197,33 @@
                         <div>
                             <div id="mensagemSucesso" role="alert"></div>
                             <form id="formCadastro" novalidate>
-                                <div>
-                                    <div>
+                                <div class="dados-cliente">
+                                    <div class="campo">
                                         <label for="nome">Nome completo</label>
                                         <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Paula Souza"
                                             required>
                                         <div>Por favor, informe seu nome completo.</div>
                                     </div>
-                                    <div>
+                                    <div class="campo">
                                         <label for="email">E-mail</label>
                                         <input type="email" id="email" name="email" placeholder="voce@email.com"
                                             required>
                                         <div>Por favor, informe um e-mail válido.</div>
                                     </div>
-                                    <div>
+                                    <div class="campo">
                                         <label for="telefone">Telefone (com DDD)</label>
                                         <input type="tel" id="telefone" name="telefone" placeholder="(21) 90000-0000"
                                             pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" title="Use o formato (21) 90000-0000"
                                             required>
                                         <div>Use o formato (21) 90000-0000.</div>
                                     </div>
-                                    <div>
+                                    <div class="campo">
                                         <label for="idade">Idade</label>
                                         <input type="number" id="idade" name="idade" min="0" max="120"
                                             placeholder="Ex.: 25" required>
                                         <div>Por favor, informe uma idade válida.</div>
                                     </div>
-                                    <div>
+                                    <div class="campo">
                                         <label for="numeracao">Numeração</label>
                                         <select id="numeracao" name="numeracao" required>
                                             <option value="" selected disabled>Escolha...</option>
@@ -239,26 +239,56 @@
                                         </select>
                                         <div>Selecione uma numeração.</div>
                                     </div>
-                                    <div>
+                                    <div class="campo">
                                         <label for="cor">Cor preferida</label>
                                         <input type="color" id="cor" name="cor" value="#ff6b35">
                                     </div>
-                                    <div>
-                                        <span>Estilo favorito</span>
-                                        <div>
-                                            <input type="radio" name="estilo" id="estiloEsportivo" value="Esportivo"
-                                                checked>
-                                            <label for="estiloEsportivo">Esportivo</label>
+
+                                    <fieldset>
+                                        <legend>Estilo favorito</legend>
+
+                                        <div class="estilofavorito">
+                                            <div>
+                                                <input type="radio" id="estiloEsportivo"
+                                                    name="estilo" value="Esportivo">
+                                                <label for="estiloEsportivo">Esportivo</label>
+                                            </div>
+
+                                            <div>
+                                                <input type="radio" id="estiloCasual"
+                                                    name="estilo" value="Casual">
+                                                <label for="estiloCasual">Casual</label>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="radio" name="estilo" id="estiloCasual" value="Casual">
-                                            <label for="estiloCasual">Casual</label>
+                                    </fieldset>
+
+                                    <fieldset>
+                                        <legend>Tipos de tênis de interesse</legend>
+
+                                        <div class="tipostenis">
+                                            <div>
+                                                <input type="checkbox" id="tenisCorrida">
+                                                <label for="tenisCorrida">Corrida</label>
+                                            </div>
+
+                                            <div>
+                                                <input type="checkbox" id="tenisCasual">
+                                                <label for="tenisCasual">Casual</label>
+                                            </div>
+
+                                            <div>
+                                                <input type="checkbox" id="tenisBasquete">
+                                                <label for="tenisBasquete">Basquete</label>
+                                            </div>
+
+                                            <div>
+                                                <input type="checkbox" id="tenisTrilha">
+                                                <label for="tenisTrilha">Trilha</label>
+                                            </div>
                                         </div>
-                                        <div>
-                                            <input type="radio" name="estilo" id="estiloBasquete" value="Basquete">
-                                            <label for="estiloBasquete">Basquete</label>
-                                        </div>
-                                    </div>
+                                    </fieldset>
+                                        
+
                                     <div>
                                         <label for="mensagem">Alguma observação?</label>
                                         <textarea id="mensagem" name="mensagem" rows="3"
@@ -289,7 +319,7 @@
 
     <footer id="contato">
         <p>&copy; 2026 SneakZone.</p>
-        <address><span id="email">contato@sneakzone.com.br</span> - <img src="img/whatsapp-logo.svg" alt="">
+        <address><span id="emailrodape">contato@sneakzone.com.br</span> - <img src="img/whatsapp-logo.svg" alt="">
             <span id="whatsapp">WhatsApp (21) 90000-0000
             <span>
         </address>
