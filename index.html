@@ -5,8 +5,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <title>Document</title>
+    <title>SneakZone</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/style.css">
+
 </head>
 
 <body>
@@ -28,37 +31,37 @@
             <span>⚡ Frete Grátis nas compras acima de R$ 299,00</span>
         </aside>        
 
-        <section id="destaque">
+        <section id="destaque" class="container">
             <h2> A loja de tênis dos corredores </h2>
             <p> Leveza, conforto e estilo para bater o seu recorde. </p>
         </section>
 
-        <section id="produtos">
+        <section id="produtos" class="container">
             <h2> Nossos Tênis </h2>
-            <div>
-                <article>
+            <div class="row g-4">
+                <article class="col-12 col-md-4">
                     <span class="badge">Desconto</span>
                     <img src="img/aerorun.jpg" alt="Tênis de corrida laranja modelo Aerorun">
                     <h3> AeroRun Laranja </h3>
                     <p> Leveza para bater seu recorde.</p>
                     <p><del>R$ 399,90</del> R$ 349,90</p>
-                    <button type="button" onclick="comprar('TrailMax', 349,90)">Comprar</button>
+                    <button class="btn btn-outline-danger" type="button" onclick="comprar('TrailMax', 349,90)">Comprar</button>
                 </article>
-                <article>
+                <article class="col-12 col-md-4">
                     <span class="badge">Desconto</span>
                     <img src="img/urbanstep.jpg" alt="Tênis casual azul modelo UrbanStep" >
                     <h3> UrbanStep Azul </h3>
                     <p> O casual do dia a dia.</p>
                     <p> <del>R$ 279,90</del> R$230,00</p>
-                    <button type="button" onclick="comprar('TrailMax', 230)">Comprar</button>
+                    <button class="btn btn-outline-danger" type="button" onclick="comprar('TrailMax', 230)">Comprar</button>
                 </article>
-                <article>
+                <article class="col-12 col-md-4">
                     <span class="badge lancamento">lançamento</span>
                     <img src="img/courtpro.jpg" alt="Tênis de basquete verde modelo CourtPro">
                     <h3> TrailMax Verde </h3>
                     <p> Aderencia para trilhas.</p>
                     <p>R$ 429,90</p>
-                    <button type="button" onclick="comprar('TrailMax', 429,90)">Comprar</button>
+                    <button class="btn btn-outline-danger" type="button" onclick="comprar('TrailMax', 429,90)">Comprar</button>
                 </article>
             </div>
 
@@ -66,10 +69,10 @@
 
 
 
-        <section id="tamanho">
+        <section id="tamanho" class="container">
             <h2>Guia de Tamanhos</h2>
             <div>
-                <table>
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th>Numeração (BR)</th>
@@ -109,10 +112,10 @@
 
         </section>
 
-        <section id="precos">
+        <section id="precos" class="container">
             <h2>Fretes e Prazos</h2>
             <div>
-                <table>
+                <table class="table table-striped">
                     <thead>
                         <tr>
                             <th scope="col">Região</th>
@@ -149,9 +152,9 @@
             </div>
         </section>
 
-        <section id="frete">
-            <h2>Calculadora de Fretes</h2>
-            <p>Informe o valor da compra e sua região para calcular o frete</p>
+        <section id="frete" class="container">
+            <h2 >Calculadora de Fretes</h2>
+            <p class="form-text">Informe o valor da compra e sua região para calcular o frete</p>
             <label for="">Valor da compra</label>
             <input type="number" id="valorCompra">
             <label for="">Região de entrega</label>
@@ -161,13 +164,13 @@
                 <option value="sul">Sul</option>
                 <option value="nordeste">Nordeste</option>
             </select>
-            <button type="button" onclick="calcularFrete()">
+            <button class="btn btn-outline-success" type="button" onclick="calcularFrete()">
                 Calcular frete
             </button>
             <p id="resultado"></p>
         </section>
 
-        <section id="sobre">
+        <section id="sobre" class="container">
             <h2> Sobre a SneakZone</h2>
             <p>Nascemos em 2026 com a missão...</p>
 
@@ -177,7 +180,7 @@
             </aside>
         </section>
 
-        <section id="faq">
+        <section id="faq" class="container">
             <h2> Dúvidas Frequentes</h2>
             <details>
                 <summary>Qual o prazo de entrega?</summary>
@@ -189,7 +192,7 @@
             </details>
         </section>
 
-        <section id="cadastro">
+        <section id="cadastro" class="container">
             <h2>Cadastro do Cliente</h2>
             <div>
                 <div>
@@ -197,33 +200,33 @@
                         <div>
                             <div id="mensagemSucesso" role="alert"></div>
                             <form id="formCadastro" novalidate>
-                                <div class="dados-cliente">
-                                    <div class="campo">
+                                <div class="row g-3">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="nome">Nome completo</label>
                                         <input type="text" id="nome" name="nome" placeholder="Ex.: Ana Paula Souza"
                                             required>
-                                        <div>Por favor, informe seu nome completo.</div>
+                                        <div class="form-text">Por favor, informe seu nome completo.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="email">E-mail</label>
                                         <input type="email" id="email" name="email" placeholder="voce@email.com"
                                             required>
-                                        <div>Por favor, informe um e-mail válido.</div>
+                                        <div class="form-text">Por favor, informe um e-mail válido.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="telefone">Telefone (com DDD)</label>
                                         <input type="tel" id="telefone" name="telefone" placeholder="(21) 90000-0000"
                                             pattern="\(\d{2}\)\s?\d{4,5}-\d{4}" title="Use o formato (21) 90000-0000"
                                             required>
-                                        <div>Use o formato (21) 90000-0000.</div>
+                                        <div class="form-text">Use o formato (21) 90000-0000.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="idade">Idade</label>
                                         <input type="number" id="idade" name="idade" min="0" max="120"
                                             placeholder="Ex.: 25" required>
-                                        <div>Por favor, informe uma idade válida.</div>
+                                        <div class="form-text">Por favor, informe uma idade válida.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="numeracao">Numeração</label>
                                         <select id="numeracao" name="numeracao" required>
                                             <option value="" selected disabled>Escolha...</option>
@@ -237,9 +240,9 @@
                                             <option>43</option>
                                             <option>44</option>
                                         </select>
-                                        <div>Selecione uma numeração.</div>
+                                        <div class="form-text">Selecione uma numeração.</div>
                                     </div>
-                                    <div class="campo">
+                                    <div class="campo col-12 col-md-6">
                                         <label for="cor">Cor preferida</label>
                                         <input type="color" id="cor" name="cor" value="#ff6b35">
                                     </div>
@@ -303,8 +306,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <button type="button" onclick="cadastrar()"><i></i> Cadastrar</button>
-                                        <button type="reset">Limpar</button>
+                                        <button class="btn btn-outline-primary" type="button" onclick="cadastrar()"><i></i> Cadastrar</button>
+                                        <button class="btn btn-outline-danger" type="reset">Limpar</button>
                                     </div>
                                 </div>
                             </form>
@@ -319,9 +322,10 @@
 
     <footer id="contato">
         <p>&copy; 2026 SneakZone.</p>
-        <address><span id="emailrodape">contato@sneakzone.com.br</span> - <img src="img/whatsapp-logo.svg" alt="">
-            <span id="whatsapp">WhatsApp (21) 90000-0000
-            <span>
+        <address>
+            <span id="emailrodape">contato@sneakzone.com.br</span> - 
+            <img src="img/whatsapp-logo.svg" alt="">
+            <span id="whatsapp">WhatsApp (21) 90000-0000</span>
         </address>
     </footer>
 
