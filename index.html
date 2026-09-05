@@ -14,21 +14,73 @@
 
 <body>
 
-    <header>
-        <h1> Sneak<span>Zone</span></h1>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
 
-        <nav>
-            <ul>
-                <li><a href="#produtos">Produtos</a></li>
-                <li><a href="#sobre">Sobre</a></li>
-                <li><a href="#cadastro">Cadastro</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
-    </header>
+            <a id="nome"class="navbar-brand" href="#">
+                <span id="sneak">Sneak</span>Zone
+            </a>
+
+            <button class="navbar-toggler"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#menu"
+                    aria-controls="menu"
+                    aria-expanded="false"
+                    aria-label="Abrir menu">
+
+                <span class="navbar-toggler-icon"></span>
+
+            </button>
+
+            <div class="collapse navbar-collapse" id="menu">
+
+                <ul class="navbar-nav ms-auto">
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#produtos">
+                            Produtos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tamanho">
+                            Tamanhos
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#precos">
+                            Fretes
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#cadastro">
+                            Cadastro
+                        </a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contato">
+                            Contato
+                        </a>
+                    </li>
+
+                </ul>
+
+            </div>
+
+        </div>
+    </nav>
+
+    
     <main>
-        <aside class="top-bar">
-            <span>⚡ Frete Grátis nas compras acima de R$ 299,00</span>
+        <aside>
+            <div id="top-bar" class="alert alert-info" role="alert">
+                <span>⚡ Frete Grátis nas compras acima de R$ 299,00</span>
+            </div>
+
         </aside>        
 
         <section id="destaque" class="container">
@@ -39,7 +91,7 @@
         <section id="produtos" class="container">
             <h2> Nossos Tênis </h2>
             <div class="row g-4">
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-4 border border-danger">
                     <span class="badge">Desconto</span>
                     <img src="img/aerorun.jpg" alt="Tênis de corrida laranja modelo Aerorun">
                     <h3> AeroRun Laranja </h3>
@@ -47,7 +99,7 @@
                     <p><del>R$ 399,90</del> R$ 349,90</p>
                     <button class="btn btn-outline-danger" type="button" onclick="comprar('TrailMax', 349,90)">Comprar</button>
                 </article>
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-4 border border-danger">
                     <span class="badge">Desconto</span>
                     <img src="img/urbanstep.jpg" alt="Tênis casual azul modelo UrbanStep" >
                     <h3> UrbanStep Azul </h3>
@@ -55,7 +107,7 @@
                     <p> <del>R$ 279,90</del> R$230,00</p>
                     <button class="btn btn-outline-danger" type="button" onclick="comprar('TrailMax', 230)">Comprar</button>
                 </article>
-                <article class="col-12 col-md-4">
+                <article class="col-12 col-md-4 border border-warning">
                     <span class="badge lancamento">lançamento</span>
                     <img src="img/courtpro.jpg" alt="Tênis de basquete verde modelo CourtPro">
                     <h3> TrailMax Verde </h3>
@@ -72,7 +124,7 @@
         <section id="tamanho" class="container">
             <h2>Guia de Tamanhos</h2>
             <div>
-                <table class="table table-striped">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th>Numeração (BR)</th>
@@ -115,7 +167,7 @@
         <section id="precos" class="container">
             <h2>Fretes e Prazos</h2>
             <div>
-                <table class="table table-striped">
+                <table class="table table-striped table-hover">
                     <thead>
                         <tr>
                             <th scope="col">Região</th>
@@ -243,7 +295,7 @@
                                         <div class="form-text">Selecione uma numeração.</div>
                                     </div>
                                     <div class="campo col-12 col-md-6">
-                                        <label for="cor">Cor preferida</label>
+                                        <label for="cor" class="form-label">Cor preferida</label>
                                         <input type="color" id="cor" name="cor" value="#ff6b35">
                                     </div>
 
@@ -330,6 +382,7 @@
     </footer>
 
     <script src="js/script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
